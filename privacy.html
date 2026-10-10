@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — MailVault</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Theme Manager -->
+  <script src="theme.js"></script>
+  <!-- Privacy Stylesheet -->
+  <link rel="stylesheet" href="privacy.css">
+</head>
+<body>
+
+<header>
+  <div class="container-fluid px-3 px-md-4 h-100 d-flex align-items-center justify-content-between">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">
+        <img src="logo.png" width="36" height="36" alt="MailVault Logo" onerror="this.style.display='none';this.parentElement.innerHTML='📬'">
+      </div>
+      <span>Mail<em>Vault</em></span>
+    </a>
+
+    <div class="d-flex align-items-center gap-2">
+      <button type="button" class="btn-theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme" title="Toggle Light/Dark Theme">
+        <i class="bi bi-sun-fill theme-toggle-icon text-warning"></i>
+      </button>
+
+      <a href="index.html" class="back-btn">
+        <i class="bi bi-arrow-left"></i> Back to app
+      </a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="hero">
+    <div class="hero-icon">🔒</div>
+    <h1>Privacy Policy</h1>
+    <p>We built MailVault with one principle: your emails belong to you, not us.<br>This page explains exactly what happens to your data.</p>
+    <span class="updated">Last updated: June 2026</span>
+  </div>
+
+  <!-- Core promise -->
+  <div class="card">
+    <div class="card-title">
+      <div class="icon icon-green">✅</div>
+      The core promise
+    </div>
+    <div class="highlight">
+      <p>MailVault runs entirely inside your browser. Your emails never leave your device. We have no servers, no database, and no way to see your data — even if we wanted to.</p>
+    </div>
+    <p>When you sign in with Google, your Gmail access token is held in your browser's memory for that session only. When you close the tab or sign out, the token is gone. Nothing is written to any external server.</p>
+  </div>
+
+  <!-- What we access -->
+  <div class="card">
+    <div class="card-title">
+      <div class="icon icon-blue">📧</div>
+      What we access from your Gmail
+    </div>
+    <p>When you grant permission, MailVault uses the Gmail API to:</p>
+    <ul>
+      <li>Read email metadata (sender, subject, date, size) to display your email list</li>
+      <li>Read full email content and attachments when you choose to download a backup</li>
+      <li>Move emails to Trash when you use the "Move to Trash" feature</li>
+      <li>Permanently delete Trash contents when you use the "Purge Trash" feature</li>
+    </ul>
+    <p style="margin-top:1rem">All of this happens directly between your browser and Google's servers. MailVault acts as a bridge — it never stores, copies, or transmits your email content anywhere.</p>
+  </div>
+
+  <!-- What we never do -->
+  <div class="card">
+    <div class="card-title">
+      <div class="icon icon-red">🚫</div>
+      What we never do
+    </div>
+    <div class="no-collect">
+      <div class="nc-item">Upload your emails to any server</div>
+      <div class="nc-item">Store your Gmail token persistently</div>
+      <div class="nc-item">Send emails on your behalf</div>
+      <div class="nc-item">Share data with third parties</div>
+      <div class="nc-item">Track your usage or behaviour</div>
+      <div class="nc-item">Use analytics or ad tracking</div>
+      <div class="nc-item">Access emails you didn't select</div>
+      <div class="nc-item">Retain any data after sign-out</div>
+    </div>
+  </div>
+
+  <!-- Local storage -->
+  <div class="card">
+    <div class="card-title">
+      <div class="icon icon-amber">💾</div>
+      What is stored locally on your device
+    </div>
+    <p>If you use the "Own API Key" option, your Google OAuth Client ID is saved in your browser's <strong>localStorage</strong> so you don't have to re-enter it each visit. This stays on your device only — we cannot access it.</p>
+    <p>Your Gmail access token is held in memory only and is never written to localStorage, cookies, or any storage that persists after the tab is closed.</p>
+    <p>The backup ZIP file is downloaded directly to your device's Downloads folder — it is never uploaded anywhere.</p>
+  </div>
+
+  <!-- Google OAuth -->
+  <div class="card">
+    <div class="card-title">
+      <div class="icon icon-blue">🔑</div>
+      Google OAuth &amp; permissions
+    </div>
+    <p>MailVault uses Google's OAuth 2.0 system to authenticate you. We request the following Gmail scopes:</p>
+    <ul>
+      <li><strong>gmail.readonly</strong> — to read and list your emails</li>
+      <li><strong>gmail.modify</strong> — to move emails to Trash</li>
+      <li><strong>mail.google.com</strong> — to permanently delete Trash contents</li>
+    </ul>
+    <p style="margin-top:1rem">You can revoke MailVault's access at any time by visiting <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener" style="color:var(--ac);font-weight:600">myaccount.google.com/permissions</a> and removing MailVault from the list of connected apps.</p>
+  </div>
+
+  <!-- Third party -->
+  <div class="card">
+    <div class="card-title">
+      <div class="icon icon-blue">🌐</div>
+      Third-party services
+    </div>
+    <p>MailVault loads the following external resources to function:</p>
+    <ul>
+      <li><strong>Google Fonts (DM Sans)</strong> — for typography. Google may log this request per their own privacy policy.</li>
+      <li><strong>Bootstrap &amp; Bootstrap Icons (jsdelivr.net)</strong> — for responsive layout and styling.</li>
+      <li><strong>Google Identity Services</strong> — for OAuth sign-in. Subject to Google's privacy policy.</li>
+      <li><strong>Gmail API (googleapis.com)</strong> — for email access. All requests go directly from your browser to Google.</li>
+      <li><strong>JSZip (cdnjs.cloudflare.com)</strong> — loaded on demand when you download a backup. Cloudflare may log this request.</li>
+    </ul>
+    <p style="margin-top:1rem">No other third-party services, analytics tools, or advertising networks are used.</p>
+  </div>
+
+  <!-- Children -->
+  <div class="card">
+    <div class="card-title">
+      <div class="icon icon-amber">👶</div>
+      Children's privacy
+    </div>
+    <p>MailVault is not directed at children under 13. We do not knowingly collect any information from children. If you believe a child has used this service, please contact us so we can address the concern.</p>
+  </div>
+
+  <!-- Changes -->
+  <div class="card">
+    <div class="card-title">
+      <div class="icon icon-amber">📋</div>
+      Changes to this policy
+    </div>
+    <p>If this privacy policy changes, the updated version will be posted at this URL with a new "Last updated" date. Since MailVault collects no data from you, any changes are likely to be minor clarifications rather than material changes to how your data is handled.</p>
+  </div>
+
+  <!-- Contact -->
+  <div class="card">
+    <div class="card-title">
+      <div class="icon icon-green">✉️</div>
+      Contact
+    </div>
+    <div class="contact-box">
+      <p>If you have questions about this privacy policy or how MailVault works, you can reach the developer via the project's GitHub repository or by email.</p>
+      <p style="margin-top:.65rem">
+        Email: <a href="mailto:yashwanthkumar.v.2024.cse@rajalakshmi.edu.in">yashwanthkumar.v.2024.cse@rajalakshmi.edu.in</a>
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <strong>MailVault</strong> — Your emails stay on your device, always.<br>
+  Developed &amp; designed by <strong>Yashwanth Kumar</strong>
+</footer>
+
+<!-- Bootstrap 5.3 JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
